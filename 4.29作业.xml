@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+// <!DOCTYPE 软件系统 SYSTEM "check4.29.dtd">外部使用
+<!--内部DTD-->
+<!DOCTYPE 软件系统 [
+	<!ELEMENT 软件系统(欢迎词,产品目录)>
+	<!ELEMENT 欢迎词(#PCDATA)>
+	<!ELEMENT 产品目录(产品*)>
+	<!ELEMENT 产品(名称,价格,图片)>
+	 
+	<!ELEMENT 名称(#PCDATA)>
+	<!ELEMENT 价格(#PCDATA)>
+	<!ELEMENT 价格 单位(人民币|美元) #REQUIRED>
+	<!ELEMENT 图片(#EMPTY)>
+	<!ATTLIST 图片 source CDATA #REQUIRED>
+ ]>
+
+
+<软件系统>
+	<欢迎词>欢迎使用江苏大学软件系统</欢迎词>
+	<产品目录>
+		<产品>
+			<名称>仓库管理系统</名称>
+			<价格 单位 = "人民币 ">50000</价格>
+			<图片source = "product1.gif " />
+		</产品>
+		<产品>
+			<名称>工资管理系统</名称>
+			<价格 单位 = "美元 " >7000</价格>
+			<图片source = " product2.gif " />
+		</产品>
+	</产品目录>
+</软件系统>
